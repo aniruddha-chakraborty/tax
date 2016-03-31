@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ShopAdmin extends Migration
+class CarAdmin extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class ShopAdmin extends Migration
      */
     public function up()
     {
-        Schema::table('car_admin', function (Blueprint $table) {
+        Schema::create('car_admin', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username')->unique();
             $table->string('password');

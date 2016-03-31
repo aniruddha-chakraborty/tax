@@ -12,8 +12,8 @@ class Shopkeepers extends Migration
      */
     public function up()
     {
-        Schema::table('shopkeeper', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('shopkeeper', function (Blueprint $table) {
+            $table->increments('id')->unique();
             $table->string('username')->unique();
             $table->string('password');
             $table->string('api_key')->unique();

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ShopAdmin extends Migration
+class VisaAdmin extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class ShopAdmin extends Migration
      */
     public function up()
     {
-        Schema::table('police_admin', function (Blueprint $table) {
+        Schema::create('visa_admin', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username')->unique();
             $table->string('password');
@@ -28,8 +28,8 @@ class ShopAdmin extends Migration
      */
     public function down()
     {
-        Schema::table('police_admin', function (Blueprint $table) {
-            Schema::drop('police_admin');
+        Schema::table('visa_admin', function (Blueprint $table) {
+            Schema::drop('visa_admin');
         });
     }
 }

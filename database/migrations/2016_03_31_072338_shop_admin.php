@@ -12,7 +12,7 @@ class ShopAdmin extends Migration
      */
     public function up()
     {
-        Schema::table('shop_admin', function (Blueprint $table) {
+        Schema::create('shop_admin', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username')->unique();
             $table->string('password');
