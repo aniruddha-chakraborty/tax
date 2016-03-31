@@ -10,34 +10,39 @@ class loginQuery extends Model
 {
 
 
-	public function shopAdminLogin($username,$password) {
+	public function shopAdminLogin($username,$password)
+	{
 
-		
-
-	}
-
-	public function shopKeeperLogin($username,$password){
 
 
 	}
 
-	public function rajukAdminLogin($username,$password) {
+	public function shopKeeperLogin($username,$password)
+	{
 
 
 	}
 
-	public function carAdminLogin($username,$password) {
+	public function rajukAdminLogin($username,$password) 
+	{
 
 
 	}
 
-	public function policeAdminLogin($username,$password) {
+	public function carAdminLogin($username,$password) 
+	{
 
 
 	}
 
-	public function visaAdminLogin($username,$password) {
+	public function policeAdminLogin($username,$password) 
+	{
 
+
+	}
+
+	public function visaAdminLogin($username,$password)
+	{
 
 
 	}

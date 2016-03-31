@@ -10,7 +10,8 @@ class BussnessAdminSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        //
+    { 
+        
+        
     }
 }
