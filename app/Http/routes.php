@@ -12,5 +12,24 @@
 */
 
 Route::get('/', function () {
+
     return view('welcome');
+
 });
+
+
+Route::get('/login',[
+
+	'uses' => 'Admin@login',
+	'as'   => 'Login',
+	'middleware' => ['guest']
+
+]);
+
+Route::post('/postLogin',[
+
+	'uses' => 'User@postLogin',
+	'as'   => 'postLogin',
+	'middleware' => ['guest']
+
+]);

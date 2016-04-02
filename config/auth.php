@@ -38,13 +38,20 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'shopkeeper',
         ],
 
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'adminLog' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+
+
     ],
 
     /*
@@ -65,9 +72,14 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'admin' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Admin::class,
+        ],
+
+        'shopkeeper' => [
+            'driver' => 'eloquent',
+            'model' => App\ShopKeeper::class,
         ],
 
         // 'users' => [
