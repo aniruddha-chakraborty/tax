@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use 	
 
 class ShopkeeperSeeder extends Seeder
 {
@@ -11,6 +12,12 @@ class ShopkeeperSeeder extends Seeder
      */
     public function run()
     {
-        
+        $faker = Faker\Factory::create();
+
+        	for ($i = 1; $i <= 12000) {
+
+
+        	}
+
     }
 }

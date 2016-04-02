@@ -20,6 +20,7 @@ class CreateShopkeeperTable extends Migration
             $table->string('app_secret');
             $table->string('shopname');
             $table->string('vat_reg_number');
+            $table->string('bis_number'); // mongoTable
             $table->timestamps();
         });
     }

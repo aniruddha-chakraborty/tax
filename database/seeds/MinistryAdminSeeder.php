@@ -24,14 +24,14 @@ class MinistryAdminSeeder extends Seeder
        	];
 
 
-       	for ($i = 1; $i <= 7; $i++) {
+       	for ($i = 1; $i <= 7; $i++ ) {
 	
 	       	foreach ($array as $value) {
 	       		# code...
 	       		foreach ($value as $values) {
 	       			# code...
 					DB::table('ministryadmin')->insert(
-					    ['username' => $values[0], 'password' => Hash::make($values[1])]
+					    ['username' => $values[0], 'password' => Hash::make($values[1]) , 'type' => $i]
 					);
 
 	       		}

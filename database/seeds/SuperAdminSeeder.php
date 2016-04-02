@@ -13,13 +13,13 @@ class SuperAdminSeeder extends Seeder
     {
        	$array =  [
 
-       		['anik','123456',1],
-       		['porimol','123456',2],
-       		['apu','123456',3],
-       		['nowfel','123456',4],
-       		['omran','123456',5],
-       		['arnob','123456',6],
-       		['anirudda','123456',7]
+       		['anik','123456'],
+       		['porimol','123456'],
+       		['apu','123456'],
+       		['nowfel','123456'],
+       		['omran','123456'],
+       		['arnob','123456'],
+       		['anirudda','123456']
 
        	];
 

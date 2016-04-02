@@ -30,7 +30,9 @@ class DataEntryMinistryAdminSeeder extends Seeder
             foreach ($value as $values) {
               # code...
               DB::table('data_entry_ministry')->insert(
+
                   ['username' => $values[0], 'password' => Hash::make($values[1]) , 'type' => $i]
+              
               );
 
             }
