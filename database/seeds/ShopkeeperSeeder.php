@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ShopAdminSeeder extends Seeder
+class ShopkeeperSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class ShopAdminSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }
