@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DB;
-use Hash;
 
 class DataEntryMinistryAdminSeeder extends Seeder
 {

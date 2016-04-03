@@ -18,18 +18,18 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login',[
+Route::get('superadmin/login',[
 
-	'uses' => 'Admin@login',
-	'as'   => 'Login',
+	'uses' => 'SuperAdminController@login',
+	'as'   => 'SuperAdminLogin',
 	'middleware' => ['guest']
 
 ]);
 
-Route::post('/postLogin',[
+Route::post('superadmin/postLogin',[
 
-	'uses' => 'User@postLogin',
-	'as'   => 'postLogin',
+	'uses' => 'SuperAdminController@postLogin',
+	'as'   => 'SuperAdminPostLogin',
 	'middleware' => ['guest']
 
 ]);

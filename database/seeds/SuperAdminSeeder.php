@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+
 class SuperAdminSeeder extends Seeder
 {
     /**
@@ -26,13 +27,12 @@ class SuperAdminSeeder extends Seeder
 
        	foreach ($array as $value) {
        		# code...
-       		foreach ($value as $values) {
-       			# code...
-				DB::table('superadmin')->insert(
-				    ['username' => $values[0], 'password' => Hash::make($values[1])]
-				);
+    				DB::table('superadmin')->insert(
 
-       		}
+    				    ['username' => $value[0], 'password' => Hash::make($value[1])]
+    				
+            );
+
        	}
     }
 }

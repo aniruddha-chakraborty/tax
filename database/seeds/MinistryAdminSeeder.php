@@ -28,14 +28,10 @@ class MinistryAdminSeeder extends Seeder
 	
 	       	foreach ($array as $value) {
 	       		# code...
-	       		foreach ($value as $values) {
-	       			# code...
-					DB::table('ministryadmin')->insert(
-					    ['username' => $values[0], 'password' => Hash::make($values[1]) , 'type' => $i]
-					);
-
-	       		}
-	       	}
+                 DB::table('ministryadmin')->insert(
+                    ['username' => $value[0].$i, 'password' => Hash::make($value[1]) , 'type' => $i]
+                );
+ 	       	}
 
        	}
     }

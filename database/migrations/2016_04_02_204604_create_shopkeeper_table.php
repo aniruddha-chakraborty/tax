@@ -13,6 +13,7 @@ class CreateShopkeeperTable extends Migration
     public function up()
     {
         Schema::create('shopkeeper', function (Blueprint $table) {
+
             $table->increments('id');
             $table->string('username');
             $table->string('password');
@@ -22,6 +23,7 @@ class CreateShopkeeperTable extends Migration
             $table->string('vat_reg_number');
             $table->string('bis_number'); // mongoTable
             $table->timestamps();
+            
         });
     }
 

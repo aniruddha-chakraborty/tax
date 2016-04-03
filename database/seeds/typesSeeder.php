@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use DB;
 
 class typesSeeder extends Seeder
 {
@@ -26,7 +25,7 @@ class typesSeeder extends Seeder
          foreach ($types as $value) {
          	# code...
 				DB::table('types')->insert(
-				    ['ministry_name' => $values]
+				    ['ministry_name' => $value]
 				);
          }
     }

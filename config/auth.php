@@ -41,16 +41,17 @@ return [
             'provider' => 'shopkeeper',
         ],
 
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-        ],
-
-        'adminLog' => [
+        'ministryAdmin' => [
             'driver' => 'session',
-            'provider' => 'admin',
+            'provider' => 'ministryadmin',
         ],
 
+        'superAdmin' => [
+
+            'driver' => 'session',
+            'provider' => 'superadmin',
+        
+        ],
 
     ],
 
@@ -72,20 +73,22 @@ return [
     */
 
     'providers' => [
-        'admin' => [
+
+        'ministryadmin' => [
             'driver' => 'eloquent',
-            'model' => App\Admin::class,
+            'model'  => App\Models\MinistryAdmin::class,
         ],
 
         'shopkeeper' => [
             'driver' => 'eloquent',
-            'model' => App\ShopKeeper::class,
+            'model'  => App\Models\ShopKeeper::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'superadmin' => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\SuperAdmin::class,
+        ],
+
     ],
 
     /*

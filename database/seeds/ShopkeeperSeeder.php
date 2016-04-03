@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use 	
+use DB;
 
 class ShopkeeperSeeder extends Seeder
 {
