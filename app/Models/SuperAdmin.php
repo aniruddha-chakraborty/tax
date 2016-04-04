@@ -1,14 +1,15 @@
 <?php
 namespace App\Models;
 
+use App\Model;
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use DB;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
+class SuperAdmin extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
-class SuperAdmin extends Model
-{
+    use Authenticatable, CanResetPassword;
 
 	protected $table = 'superadmin';
 
