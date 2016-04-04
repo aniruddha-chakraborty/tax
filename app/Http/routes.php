@@ -33,3 +33,6 @@ Route::post('superadmin/postLogin',[
 	'middleware' => ['guest']
 
 ]);
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

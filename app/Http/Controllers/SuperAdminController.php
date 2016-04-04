@@ -11,6 +11,7 @@ use Hash;
 use Auth;
 use App\Models\SuperAdmin as SuperAdminModel;
 
+
 class SuperAdminController extends BaseController {
 
     protected $table = 'superadmin';
@@ -25,21 +26,21 @@ class SuperAdminController extends BaseController {
 
 		$error 	  = [];
 		$username = $request->input('username');
-		$password = Hash::make($request->input('password'));
+		$password = Hash::all($request->input('password'));
 
 		//$Model = new SuperAdminModel;
 		//$data  = $Model->checkBoth($username,$password);
 			
-			if (Auth::guard('superAdmin')->attempt(['username' => $username , 'password' => $password])) {
+			if (Auth::guard('web')->attempt(['username' => $username , 'password' => $password])) {
 
-				//Auth::guard('superAdmin')->loginUsingId($data);
-				echo 'okokok';
+					echo 'okokok';
 				
 				} else {
 
-			
-				$error[] = 'Username or password is incorrect';
+					echo 'problem';
 
+					$error[] = 'Username or password is incorrect';
+					
 			}
 			
 	}
