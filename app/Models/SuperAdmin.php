@@ -7,11 +7,11 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use DB;
 
 
-class SuperAdmin extends Model
+class SuperAdmin extends Model implements AuthenticatableContract
 {
+	use Authenticatable;
 
 	protected $table = 'superadmin';
-
 
 	public function checkBoth($username,$password) {
 
@@ -20,7 +20,7 @@ class SuperAdmin extends Model
 			if ($query) {
 
 				return $query;
-			
+
 				} else {
 
 				return false;
