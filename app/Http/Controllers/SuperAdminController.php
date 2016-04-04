@@ -26,12 +26,12 @@ class SuperAdminController extends BaseController {
 
 		$error 	  = [];
 		$username = $request->input('username');
-		$password = Hash::all($request->input('password'));
+		$password = $request->input('password');
 
 		//$Model = new SuperAdminModel;
 		//$data  = $Model->checkBoth($username,$password);
 			
-			if (Auth::guard('web')->attempt(['username' => $username , 'password' => $password])) {
+			if (Auth::guard('superAdmin')->attempt(['username' => $username , 'password' => $password])) {
 
 					echo 'okokok';
 				
@@ -40,7 +40,7 @@ class SuperAdminController extends BaseController {
 					echo 'problem';
 
 					$error[] = 'Username or password is incorrect';
-					
+
 			}
 			
 	}
