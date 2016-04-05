@@ -16,7 +16,7 @@ class SuperAdminController extends BaseController {
 
     protected $table = 'superadmin';
     protected $redirectTo = '/superadmin/dash';
-    //protected $loginPath = '/superadmin/login';
+
 
 	public function login() {
 

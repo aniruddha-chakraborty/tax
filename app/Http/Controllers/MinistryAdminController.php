@@ -14,9 +14,8 @@ use App\Models\SuperAdmin as SuperAdminModel;
 
 class MinistryAdminController extends BaseController {
 
-    protected $table = 'ministryadmin';
-    protected $redirectTo = '/ministryadmin/dash';
-    //protected $loginPath = '/superadmin/login';
+    protected $table 	  = 'ministryadmin';
+    protected $redirectTo = '/ministry/dash';
 
 	public function login() {
 
@@ -32,15 +31,15 @@ class MinistryAdminController extends BaseController {
 			
 			if (Auth::guard('ministryAdmin')->attempt(['username' => $username , 'password' => $password])) {
 
-					
+					echo 'loged in ministry';
 
 				} else {
 
 					echo 'problem';
-
 					$error[] = 'Username or password is incorrect';
-			}
 			
+				}
+
 	}
 
 	public function dash() {

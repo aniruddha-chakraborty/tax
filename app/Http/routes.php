@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 });
 
+// Super Admin login
 
 Route::get('superadmin/login',[
 
@@ -42,27 +43,22 @@ Route::get('superadmin/dash', [
 
 ]);
 
-Route::get('logout', [
+Route::get('superadmin/logout', [
 
-	'uses' => 'SuperAdminController@dash',
-	'as'   => 'SuperAdminDash',
-	'middleware' => 'auth:superAdmin'
+	'uses' => 'SuperAdminController@logout',
+	'as'   => 'SuperAdminLogout',
 
 ]);
 
 
 
 
-
-
-
-
-
+// ministry login
 
 Route::get('ministry/login',[
 
 	'uses' => 'MinistryAdminController@login',
-	'as'   => 'SuperAdminLogin',
+	'as'   => 'MinistryAdminLogin',
 	'middleware' => ['guest']
 
 ]);
@@ -70,7 +66,7 @@ Route::get('ministry/login',[
 Route::post('ministry/postLogin', [
 
 	'uses' => 'MinistryAdminController@postLogin',
-	'as'   => 'SuperAdminPostLogin',
+	'as'   => 'MinistryAdminPostLogin',
 	'middleware' => ['guest']
 
 ]);
@@ -78,16 +74,50 @@ Route::post('ministry/postLogin', [
 Route::get('ministry/dash', [
 
 	'uses' => 'MinistryAdminController@dash',
-	'as'   => 'SuperAdminDash',
-	'middleware' => 'auth:superAdmin'
+	'as'   => 'MinistryAdminDash',
+	'middleware' => 'auth:ministryAdmin'
 
 ]);
 
-Route::get('logout', [
+Route::get('ministry/logout', [
 
-	'uses' => 'MinistryAdminController@dash',
-	'as'   => 'SuperAMinistryAdminControllerdminDash',
-	'middleware' => 'auth:superAdmin'
+	'uses' => 'MinistryAdminController@logout',
+	'as'   => 'MinistryAdminLogout',
+
+]);
+
+
+
+// Shopkeeper Login
+
+Route::get('shopkeeper/login',[
+
+	'uses' => 'shopkeeper@login',
+	'as'   => 'SuperAdminLogin',
+	'middleware' => ['guest']
+
+]);
+
+Route::post('shopkeeper/postLogin', [
+
+	'uses' => 'shopkeeper@postLogin',
+	'as'   => 'SuperAdminPostLogin',
+	'middleware' => ['guestministryadmin']
+
+]);
+
+Route::get('shopkeepershopkeeper/dash', [
+
+	'uses' => 'shopkeeper@dash',
+	'as'   => 'SuperAdminDash',
+	'middleware' => 'auth:web'
+
+]);
+
+Route::get('shopkeeper/logout', [
+
+	'uses' => 'shopkeeper@logout',
+	'as'   => 'ShopkeeperLogout',
 
 ]);
 

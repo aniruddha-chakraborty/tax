@@ -32,7 +32,7 @@ class ShopKeeperController extends BaseController {
 			
 			if (Auth::guard('web')->attempt(['username' => $username , 'password' => $password])) {
 
-							
+								
 
 				} else {
 
