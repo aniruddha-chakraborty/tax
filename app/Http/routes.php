@@ -26,13 +26,77 @@ Route::get('superadmin/login',[
 
 ]);
 
-Route::post('superadmin/postLogin',[
+Route::post('superadmin/postLogin', [
 
 	'uses' => 'SuperAdminController@postLogin',
 	'as'   => 'SuperAdminPostLogin',
 	'middleware' => ['guest']
 
 ]);
-Route::auth();
+
+Route::get('superadmin/dash', [
+
+	'uses' => 'SuperAdminController@dash',
+	'as'   => 'SuperAdminDash',
+	'middleware' => 'auth:superAdmin'
+
+]);
+
+Route::get('logout', [
+
+	'uses' => 'SuperAdminController@dash',
+	'as'   => 'SuperAdminDash',
+	'middleware' => 'auth:superAdmin'
+
+]);
+
+
+
+
+
+
+
+
+
+
+Route::get('ministry/login',[
+
+	'uses' => 'MinistryAdminController@login',
+	'as'   => 'SuperAdminLogin',
+	'middleware' => ['guest']
+
+]);
+
+Route::post('ministry/postLogin', [
+
+	'uses' => 'MinistryAdminController@postLogin',
+	'as'   => 'SuperAdminPostLogin',
+	'middleware' => ['guest']
+
+]);
+
+Route::get('ministry/dash', [
+
+	'uses' => 'MinistryAdminController@dash',
+	'as'   => 'SuperAdminDash',
+	'middleware' => 'auth:superAdmin'
+
+]);
+
+Route::get('logout', [
+
+	'uses' => 'MinistryAdminController@dash',
+	'as'   => 'SuperAMinistryAdminControllerdminDash',
+	'middleware' => 'auth:superAdmin'
+
+]);
+
+
+
+
+
+
+
+
 
 Route::get('/home', 'HomeController@index');

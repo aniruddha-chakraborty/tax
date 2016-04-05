@@ -12,27 +12,27 @@ use Auth;
 use App\Models\SuperAdmin as SuperAdminModel;
 
 
-class SuperAdminController extends BaseController {
+class ShopKeeperController extends BaseController {
 
-    protected $table = 'superadmin';
-    protected $redirectTo = '/superadmin/dash';
+    protected $table = 'ministryadmin';
+    protected $redirectTo = '/ministryadmin/dash';
     //protected $loginPath = '/superadmin/login';
 
 	public function login() {
 
-		return view('login');
+		return view('shoplogin');
 
 	}
-	
+
 	public function postLogin(Request $request) {
 
 		$error 	  = [];
 		$username = $request->input('username');
 		$password = $request->input('password');
 			
-			if (Auth::guard('superAdmin')->attempt(['username' => $username , 'password' => $password])) {
+			if (Auth::guard('web')->attempt(['username' => $username , 'password' => $password])) {
 
-					
+							
 
 				} else {
 
@@ -45,14 +45,11 @@ class SuperAdminController extends BaseController {
 
 	public function dash() {
 
-		return view('superAdminDash');
+		return view('shopAdminDash');
 
 	}
 
-	
-	public function logout(){
 
-	}
 
 
 }
