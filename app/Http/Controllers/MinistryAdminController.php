@@ -44,7 +44,7 @@ class MinistryAdminController extends BaseController {
 
 	public function dash() {
 
-		return view('superAdminDash');
+		return view('ministryAdminDash');
 
 	}
 

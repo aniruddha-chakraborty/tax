@@ -8,10 +8,8 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
 class MinistryAdmin extends Model implements AuthenticatableContract
 {
-		use Authenticatable;
+	use Authenticatable;
 
 	protected $table = 'ministryadmin';
-
-		
 
 }

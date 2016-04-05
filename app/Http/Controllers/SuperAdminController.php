@@ -24,7 +24,8 @@ class SuperAdminController extends BaseController {
 
 	}
 	
-	public function postLogin(Request $request) {
+	public function postLogin(Request $request) 
+	{
 
 		$error 	  = [];
 		$username = $request->input('username');
@@ -32,7 +33,7 @@ class SuperAdminController extends BaseController {
 			
 			if (Auth::guard('superAdmin')->attempt(['username' => $username , 'password' => $password])) {
 
-					
+
 
 				} else {
 
@@ -43,16 +44,21 @@ class SuperAdminController extends BaseController {
 			
 	}
 
-	public function dash() {
+	public function dash() 
+	{
 
 		return view('superAdminDash');
 
 	}
-
 	
-	public function logout(){
+	public function logout()
+	{
+
+		
 
 	}
+
+	
 
 
 }
